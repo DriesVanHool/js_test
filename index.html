@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./index.css">
+    <title>Hier komt jouw naam</title>
+  </head>
+  <body onload='oefening0()'>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" >Hier komt jouw logo</a>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" >Oefening 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" onclick='oefening2()' >Oefening 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page"onclick='oefening3()' >Oefening 3</a>
+            </li>
+          </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row mt-5">
+        <div class='oefening1'>
+          <!-- Hier mag je HTML code toevoegen -->
+          <div class="row">     
+            <!-- Form col -->       
+            <div class="col-md-8">
+              <form id="contactForm">
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <label for="name">First name</label>
+                    <input type="text" class="fields form-control" id="name" placeholder="First name">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="surname">Name</label>
+                    <input type="text" class="fields form-control" id="surname" placeholder="Name">
+                  </div>
+                </div>
+                <div class="row">              
+                  <div class="col-12">
+                    <label for="mail">E-mail</label>
+                    <input type="mail" class="fields form-control" id="mail" placeholder="you@example.com">
+                  </div>
+                </div>
+                <div class="row">              
+                  <div class="col-12">
+                    <label for="address">Address</label>
+                    <input type="text" class="fields form-control" id="address" placeholder="251 N Bristol Ave">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-lg-5">
+                    <label for="country">Country</label>
+                    <select id="country" class="fields form-control" onchange="changeCountry()">
+                      <option value="" selected>Choose a country</option>
+                      <option value="BE">Belgium</option>
+                      <option value="FR">France</option>
+                      <option value="NL">Netherlands</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-lg-5">
+                    <label for="province">Province</label>
+                    <select id="province" class="fields form-control">
+                      <option value="" selected>Please select a country first</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-lg-2">
+                    <label for="zip">Postal code</label>
+                    <input type="text" class="fields form-control" id="zip">
+                  </div>
+                </div>
+                <br/>
+              </form>
+              <button class="btn btn-primary" onclick="sendMessage()">Send me!</button>
+            </div>
+            <!-- msg col -->
+            <div class="col-md-4" id="message">
+              <div class="alert alert-danger" role="alert" id="errorMessage" style="display: none;">
+              </div>
+              <div class="alert alert-success" role="alert" id="successMessage" style="display: none;">
+                <h6>Good shit</h6>
+                <p>You just successfully subscribed</p>
+              </div>
+            </div>
+          </div>
+          <!-- Tot en met hier -->
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class='oefening2'>
+          <table class='table table-bordered'>
+            <tbody id='tableBody'>
+              <tr id='tableRow'></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class='oefening3'></div>
+      </div>
+    </div>
+
+    <script src='oefening0.js'></script>
+    <script src='oefening1.js'></script>
+    <script src='oefening2.js'></script>
+    <script src='oefening3.js'></script>
+  </body>
+</html>
